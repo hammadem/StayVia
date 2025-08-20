@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md bg-white border-bottom sticky-top">
+        <div class="row mt-2 logo-web">
+          <div class="col-2">
+            <a class="icon-logo" href="/listings"><i class="fa-regular fa-compass">&nbsp;</i>
+            <a class="navbar-brand" href="/listings"></div><div class="col icontxt-web"><span class="icon-text">stayvia</span></a>
+          </div>
+        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navelements" id="navbarNavAltMarkup">
+        <div class="navbar-nav mt-1">
+          <a class="nav-link explore-btn" href="/listings">Explore</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" method="POST" action="/listings/search" role="search">
+            <input class="form-control me-2 search-bar" type="search" name="destination" minlength="1" placeholder="Your destination ?"/>
+            <button class="btn search-btn" type="submit">Search<i class="fa-solid fa-magnifying-glass-location search-icon" style="color: #ffffff;"></i></button>
+          </form>
+        </div>
+        <div class="navbar-nav mt-1 ms-auto">
+          <a class="nav-link" href="/listings/new">List your space</a>
+          <% if (!currUser) {%>
+            <a class="nav-link" href="/login"><b>login</b></a>
+            <a class="nav-link" href="/signup"><b>sign up</b></a>
+          <%} if (currUser) {%>
+            <a class="nav-link" href="/logout"><b>logout</b></a>
+          <%}%>
+        </div>
+      </div>
+  </nav>

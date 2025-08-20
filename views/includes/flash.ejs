@@ -1,0 +1,17 @@
+<% if (success && success.length) { %>
+<br>
+    <div class="row">
+        <div class=" col-6 offset-3 alert alert-success" role="alert">
+            <%= success %>
+        </div>
+    </div>
+<% } %>
+
+<% if (error && error.length) { %>
+    <br>
+        <div class="row">
+            <div class=" col-6 offset-3 alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        </div>
+    <% } %>

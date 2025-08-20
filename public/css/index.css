@@ -1,0 +1,542 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+    margin: 0 !important;
+}
+
+.container {
+    flex: 1 !important;
+}
+.container-fluid {
+ flex: 1 !important;   
+}
+
+/* NavBar*/
+
+.navbar {
+    height: 5rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.nav-link {
+    color: black !important;
+}
+.icon-logo {
+    text-decoration: none !important;
+    color: #FF385C;
+}
+.icon-text {
+    font-family: "Montserrat";
+    color: #FF385C;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 0.3rem;
+}
+
+.fa-compass {
+    font-size: 2rem;
+}
+
+.logo-web {
+    margin-left: 0.7rem !important;
+}
+
+.icontxt-web {
+    margin-left: 0.1rem;
+}
+
+.explore-btn {
+    margin-left: -2rem !important;
+}
+
+.navbar-toggler {
+    margin-right: 2rem !important;
+}
+
+@media (max-width: 767px){
+    .navbar-collapse{
+        position: static !important;   /* not absolute/fixed */
+        width: 100% ;
+        background: #ffffffec;              /* optional */
+      }
+    .explore-btn {
+        margin-left: 0 !important;
+    }
+    .navelements {
+        padding-left: 2.5em !important;
+        padding-bottom: 1.2rem !important;
+        padding-top: 0.3rem !important;
+    }
+  }  
+
+/* Footer */
+
+.f-info {
+    height: 4.9375rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.f-info-links-brand {
+    display: flex;
+    padding: 1rem;
+    flex-wrap: nowrap;
+    
+}
+
+.f-link {
+    margin-right: 1.3rem;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.f-info-socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    white-space: nowrap;
+}
+.f-info-links-brand {
+    width: 50%;
+    padding-right: 10%;
+}
+.f-info-socials {
+    width: 50%;
+    padding-left: 38%;
+}
+
+.f-info a {
+    text-decoration: none;
+    color: black;
+}
+.f-info a:hover {
+    text-decoration: underline;
+}
+.f-info-socials span:hover {
+    border-radius: 20px;
+    height: 2rem;
+    width: 2rem;
+    padding-left: 0.4rem;
+    padding-top: 0.2rem;
+    background-color:rgba(211, 211, 211, 0.534);    
+}
+
+@media (max-width:900px) {
+    .f-info-links-brand {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:487px) {
+    .f-info-links-brand {
+        font-size: 0.9rem;
+    }
+    .f-link {
+        margin-right: 0.8rem;
+    }
+    .f-info-links-brand {
+        padding: 0.5rem;
+    }
+    .f-info-socials {
+        width: 50%;
+        padding-left: 35%;
+    }
+}
+
+@media (max-width:425px) {
+    .f-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 2rem !important;
+        padding-top: 1.2rem;
+    }
+
+    .f-link {
+        margin-right: 0.8rem;
+    }
+    .f-info-links-brand {
+        padding: 0.5rem;
+    }
+    .f-info-socials {
+        width: 50%;
+        padding-left: 25%;
+        margin-left: 1.3rem;
+    }
+    .f-info-links-brand {
+        font-size: 1rem;
+        display: flex;
+        padding: 0rem;
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media (max-width:395px) {
+    .f-info {
+        padding-left: 1.4rem !important;
+    }
+
+    .f-info-socials {
+        margin-left: 1.3rem;
+    }
+
+    .f-info-links-brand {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:360px) {
+    .f-info {
+        padding-left: 0.5rem !important;
+    }
+}
+
+@media (max-width:333px) {
+    .f-info {
+        padding-left: 0rem !important;
+    }
+}
+
+/* Listing Card / index page */
+.card {
+    border: none !important;
+}
+.main-img {
+    object-fit: cover;
+    height: 13rem;
+    border-radius: 0.9rem !important;
+}
+.index-card-body {
+    padding: 0 !important;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-left: 0.6rem;
+}
+.title {
+    font-size: 0.85rem;
+}
+.price {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: grey;
+}
+.link-card {
+    text-decoration: none;
+    color: black;
+}
+.card-img-overlay:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* New Form */
+
+.btn-dark {
+    background-color:#FF385C !important;
+    border: none !important;
+}
+
+/* Show Page */
+
+.show-img {
+    margin-top: 1rem;
+    height: 26rem;
+    border-radius: 1rem !important;
+}
+
+@media (max-width: 579px) {
+    .show-img {
+        margin-top: 1rem;
+        height: 20rem;
+    }
+    .offset-2 {
+        margin-left: 41px !important;
+    }
+}
+
+@media (max-width: 470px) {
+    .show-img {
+        height: 17rem;
+    }
+    .title-heading {
+        font-size: 1.4rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 415px) {
+    .show-img {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 405px) {
+    .show-img {
+        height: 17rem;
+    }
+}
+@media (max-width: 390px) {
+    .show-img {
+        height: 16rem;
+    }
+}
+@media (max-width: 375px) {
+    .show-img {
+        height: 15rem;
+    }
+}
+
+.show-card-body {
+    padding: 0 !important;
+    margin-top: 0.6rem;
+    margin-left: 0.1rem;
+}
+.show-btns {
+    width: 100% !important;
+}
+.del-btn {
+    background-color: rgba(0, 0, 0, 0.815) !important;
+}
+
+.dark-btn {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+}
+
+/* map */
+
+#map { 
+    height: 400px;
+    width: 80vh;
+    border-radius: .8rem;
+}
+
+@media (max-width: 748px) {
+    #map { 
+        height: 300px;
+        width: 70vh;
+    }
+}
+@media (max-width: 660px) {
+    #map { 
+        height: 300px;
+        width: 60vh;
+    }
+}
+@media (max-width: 580px) {
+    #map { 
+        height: 300px;
+        width: 50vh;
+    }
+}
+@media (max-width: 480px) {
+    #map { 
+        height: 250px;
+        width: 40vh;
+    }
+}
+@media (max-width: 384px) {
+    #map { 
+        height: 250px;
+        width: 35vh;
+    }
+}
+
+.marker {
+    background-image: url('https://res.cloudinary.com/dunackyyu/image/upload/v1755129243/home_1673236_xcegqh.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+/* Catagories */
+
+.catBarContainer {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 2rem;
+    justify-content: center;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+
+.filter {
+    flex: 0 0 auto;
+    text-align: center !important;
+    margin-right: 2.3rem !important;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.filter i {
+    font-size: 1.2rem;
+}
+
+.filterFunc {
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+}
+
+.filter:hover {
+    opacity: 1;
+}
+
+#taxPriceToggle {
+    border: 1px solid rgba(0, 0, 0, 0.637);
+    display: flex;
+    align-items: center;
+    border-radius: 0.7rem;
+    height: 2.5rem;
+
+}
+
+.form-switch {
+    white-space: nowrap;
+    justify-self: center !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    margin-bottom: 0.4rem !important;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.scroll-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 10;
+    display: none;
+}
+
+@media (max-width:460px) {
+    .filter {
+        font-size: 1rem !important;
+    }
+    .form-check-label {
+        font-size: 0.9rem !important;
+    }
+    .scroll-btn {
+        font-size: 1rem;
+        padding: 0.8px !important;
+    }
+    .form-switch {
+        margin-bottom: 0.5rem !important;
+        margin-left: 0.55rem !important;
+        margin-right: 0.55rem !important;
+    }
+}
+
+@media (max-width:449px) {
+    .scroll-btn {
+        font-size: 0.8rem;
+        padding: 1px !important;
+    }
+    .filter {
+        font-size: 0.6rem !important;
+        margin-right: 1rem !important;
+        margin-right: 0.9rem !important;
+        
+    }
+    .form-check-label {
+        font-size: 0.8rem !important;
+    }
+    .form-switch {
+    transform: scale(0.8);
+    margin-left: 0.2rem !important;
+    margin-right: 0.2rem !important;
+    margin-bottom: 0.6rem !important;
+    }
+    .right {
+        margin-right: 0.5rem !important;
+    }
+}
+
+@media (max-width:399px) {
+    .scroll-btn {
+        font-size: 0.7rem;
+        padding: 0.7px !important;
+    }
+    .filter {
+        font-size: 0.6rem !important;
+        margin-right: 0.9rem !important;
+    }
+    .form-switch {
+    transform: scale(0.8);
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+    }
+    #taxPriceToggle {
+        height: 1.9rem;
+        width: 7.7rem;
+    }
+    .right {
+        margin-right: 0.5rem !important;
+    }
+}
+
+.tax {
+    display: none;
+}
+
+
+/* Search Bar */
+
+.search-btn {
+    
+    background-color: #FF385C !important;
+    color: white !important;
+    border-radius: 25px !important;
+    font-size: 1rem !important;
+    padding: 0 1rem 0 1rem !important;
+} 
+
+.search-icon {
+    display: inline !important;
+    margin-left: 7px !important;
+}
+
+.search-bar {
+    border-radius: 25px !important;
+    padding: 0.7rem 0rem 0.7rem 3.5rem !important;
+    font-size: 0.9rem !important;
+    width: 16rem !important;
+}
+
+@media (max-width: 914px) {
+    .search-bar {
+        padding: 0.5rem 0rem 0.5rem 2rem !important;
+        width: 13rem !important;
+    }    
+}
+@media (max-width: 850px) {
+    .search-bar {
+        padding: 0.4rem 0rem 0.4rem 1.6rem !important;
+        width: 10.5rem !important;
+    }    
+    .search-btn {
+        padding: 0 0.55rem 0 0.55rem !important;
+        font-size: 0.9rem !important;
+    } 
+}
+@media (max-width: 767px) {
+    .search-bar {
+        padding: 0.5rem 0rem 0.5rem 2rem !important;
+        width: 15rem !important;
+    }
+    .search-btn {
+        padding: 0 0.6rem 0 0.6rem !important;
+    } 
+}

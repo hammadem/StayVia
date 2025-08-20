@@ -1,0 +1,76 @@
+<%- layout('/layouts/boilerplate') %>
+<body>
+    <br>
+    <h3 class="mb-3 offset-2">Edit your Listing</h3>
+    <form action="/listings/<%=listing._id%>?_method=PUT" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="mb-3">
+                    <label for="new-title" class="form-label">Title: </label>
+                    <input type="text" name="listing[title]" class="form-control" id="new-title" value="<%= listing.title %>" required>
+                    <div class="invalid-feedback">
+                        enter a catchy title
+                    </div>
+                    <div class="valid-feedback">
+                        Title Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="new-description" class="form-label">Description: </label>
+                    <textarea name="listing[description]" id="new-description"  class="form-control" required><%= listing.description %></textarea>
+                    <div class="invalid-feedback">
+                        Please enter brief description
+                      </div>
+                </div>
+                <div class="mb-4" style="height: 200px; width: 300px;">
+                    <span>Original Image:</span><br>
+                    <img src="<%= originalURl %>" style="height: 100%; width: 100%; object-fit: cover;">
+                </div>
+                <div class="mb-3">
+                    <label for="new-img" class="form-label">Image: </label>
+                    <input type="file"  id="new-img"  name="listing[image]" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="new-price" class="form-label">Price: </label>
+                    <input type="number" id="new-price" name="listing[price]" class="form-control" value="<%= listing.price %>" required>
+                    <div class="invalid-feedback">
+                        Valid Price required
+                    </div>
+                </div>
+                <div class="row row-cols-md-2">
+                    <div class="mb-4 col-md-4">
+                        <label for="new-location" class="form-label">Location: </label>
+                        <input type="text" id="new-location" class="form-control" name="listing[location]" value="<%= listing.location %>" required>
+                        <div class="invalid-feedback">
+                            Location required
+                        </div>
+                    </div>
+                    <div class="mb-4 col-md-8">
+                        <label for="new-country" class="form-label">Country: </label>
+                        <input type="text" id="new-country" name="listing[country]" class="form-control"  value="<%= listing.country %>" required>
+                        <div class="invalid-feedback">
+                            Country required
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="new-category" class="form-label">Category: </label>
+                    <select id="new-category" name="listing[category]" class="form-select" required>
+                        <option value="" disabled selected>Choose a Category</option>
+                        <% for (categoryIndv of categories) { %>
+                            <% if (categoryIndv === listing.category) { %>
+                                <option value="<%=categoryIndv%>" selected ><%=categoryIndv%></option>
+                            <% } else { %>
+                                <option value="<%=categoryIndv%>" ><%=categoryIndv%></option>
+                            <% } %>
+                        <% } %>
+                    </select>
+                    <div class="invalid-feedback">
+                        Category required
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-dark" value="save changes"><br><br>
+            </div>
+          </div>
+    </form>
+</body>
