@@ -16,6 +16,7 @@ const User = require('./models/User');
 const passport = require ('passport');
 const LocalStrategy = require ('passport-local');
 const passportLocalMongoose = require ('passport-local-mongoose');
+const {job} = require ('./cron-refresher.js');
 
 const listings = require ('./routers/listings.js');
 const reviews = require ('./routers/reviews.js');
@@ -52,12 +53,15 @@ const sessionOptions = {
     }
 };
 
+job.start ();
+
 app.set ('view engine','ejs');
 app.set ('views',path.join(__dirname,'views'));
 app.use (express.urlencoded({extended: true}));
 app.use (methodOverride('_method'));
 app.engine ('ejs',ejsMate);
 app.use (express.static(path.join(__dirname,'/public')));
+
 
 app.use (session(sessionOptions));
 app.use (flash());
